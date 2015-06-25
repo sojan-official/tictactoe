@@ -178,6 +178,7 @@ body{
     }
 
     .col span{
+      margin-top: 7px;
       display: inline-block;
       font-size: 90px;
     }    
