@@ -218,7 +218,7 @@
 
   //Game events
   socket.on('room exists',function(room){
-    alert(room + "already taken ");
+    alert(room + " already taken ");
     userName ="";
     playerType ="";
     room="";
@@ -229,7 +229,7 @@
 
 
   socket.on('wrong room',function(room){
-    alert(room + "room don't exist ");
+    alert(room + " room don't exist ");
     waitScreen.style.display ="none";
     promptScreen.style.display = "block";
     gameScreen.style.display = "none";
