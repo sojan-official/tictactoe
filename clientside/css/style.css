@@ -59,21 +59,19 @@ table {
 
 
 body{
-  font-family: sans-serif;
-  background-color:   background: -webkit-linear-gradient(90deg, #2BC0E4 10%, #EAECC6 90%); /* Chrome 10+, Saf5.1+ */  background:    -moz-linear-gradient(90deg, #2BC0E4 10%, #EAECC6 90%); /* FF3.6+ */  background:     -ms-linear-gradient(90deg, #2BC0E4 10%, #EAECC6 90%); /* IE10 */  background:      -o-linear-gradient(90deg, #2BC0E4 10%, #EAECC6 90%); /* Opera 11.10+ */  
-  background: linear-gradient(90deg, rgba(43, 192, 228, 0.63) 10%, #EAECC6 90%); /* W3C */;
+  font-family: arial, helvetica, sans-serif; /* Chrome 10+, Saf5.1+ */  background:    -moz-linear-gradient(90deg, #2BC0E4 10%, #EAECC6 90%); /* FF3.6+ */  background:     -ms-linear-gradient(90deg, #2BC0E4 10%, #EAECC6 90%); /* IE10 */  background:      -o-linear-gradient(90deg, #2BC0E4 10%, #EAECC6 90%); /* Opera 11.10+ */  
+  background: #e6e7e8; /* W3C */;
 }
 
  .container{
-      box-shadow: 1px 1px 15px #000;
-      color: #fff;
-      background: #1C140D;
+      color: #204056;
       margin: 25px auto 0px;
       width: 900px;
       padding: 25px;
     }
 
     h2,h3{
+      font-weight: 200;
       line-height: 26px;
       text-align:center;
     
@@ -83,10 +81,12 @@ body{
 
 
 #gametitle{
-  color: white;
+  padding: 12px;
+  background: #fff;
+  color: #39d1b4;
   font-size: 30px;
-  margin-top: 35px;
 
+  border-bottom: 2px solid rgba(0,0,0,0.08);
 }
 
 
@@ -94,49 +94,56 @@ body{
 #promptscreen{
   
 
-  /* background: lightgray; */
-  /* margin:30px auto; */
+  background: #fff;
+  margin:30px auto;
   width:400px;
-  border-right: 1px solid #372D2D;
   padding:30px;
 
 }
 
 #promptscreen input{
-  padding: 0px 11px;
-  font-size: 15px;
+  border-radius: 2px;
+  border: 1px solid #eee;
+  padding: 3px 15px;
+  font-size: 16px;
   margin: 10px 0px;
   width: 100%;
-  height: 30px;
-  border:none;
+  height: 42px;
 }
 
 
 #promptscreen input[type=submit]{
   border:0px;
   width:100%;
+  background-color: #39d1b4;
   margin: 9px 0px;
-  padding:0px;
+  padding: 10px;
 
+  height: 46px;
+  color: #fff;
   text-transform: capitalize;
 }
 
+
+#promptscreen input[type=submit]:hover{
+  cursor: pointer;
+  background-color: teal;
+}
+
 #waitscreen{
- /* border-radius:5px; */
   
 
   
- /* background: lightgray; */
+ background: #fff;
   margin:30px auto;
   
- color: #CBE86B;
- width:400px;
+ width: 400px;
   
- /* border:1px solid #eee; */
-  padding:30px;
+  
+ padding:30px;
   text-align:center;
   
- font-size: 24px;
+ font-size: 21px;
 }
 
 #waitscreen img{
@@ -144,11 +151,26 @@ body{
 }
 
 #gamescreen{
+  background: #fff;
   width:500px;
   margin: 5px auto;
   text-align:center;
-  padding: 0px;
-  border-radius:5px;
+  padding: 22px;
+  /* border-radius:5px; */
+}
+
+#message{font-weight:normal;}
+
+#gamedetails{
+    font-size: 22px;
+    font-weight: 500;
+
+}
+
+#message{
+  color: #f65a5b;
+  margin-top: 16px;
+  font-size: 20px;
 }
 
     #board{
@@ -163,7 +185,11 @@ body{
 
     .col{
 
-      text-align: center;
+      padding-top: 6px;
+
+      color: #39d1b4;
+
+      /* text-align: center; */
       
 
       margin: 6.5px;
@@ -177,8 +203,17 @@ body{
       background-color: #fff;
     }
 
+    .col:hover {
+      background: #39d1b4;
+      cursor:pointer;
+    }
+
+    .col.ticked:hover{
+      background-color: #fff;
+      cursor:initial;
+    }
+
     .col span{
-      margin-top: 7px;
       display: inline-block;
       font-size: 90px;
     }    

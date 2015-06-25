@@ -46,7 +46,7 @@
   }
 
   function updateGameDetails (player,room,type) {
-    document.getElementById('gamedetails').innerHTML = "player:"+player+" | room:"+room+" | type:"+type;
+    document.getElementById('gamedetails').innerHTML = "Player : "+player+"  |  Room : "+room+"  |  Type:"+type;
   }
 
 
@@ -88,14 +88,14 @@
 
       currentTurn = 'x';
       if(playerType=="x"){
-        updateStatus("You(x) makes the first move");
+        updateStatus("You have to make the first move [x]");
 
       }else if(playerType=="o"){
-        updateStatus("wait for your opponent(x)");
+        updateStatus("Wait for your opponent to play [x]");
 
       }else{
 
-        updateStatus("you are a spectator");
+        updateStatus("You are a spectator of this match");
 
       }
 
@@ -174,13 +174,13 @@
       currentTurn = player === 'x' ? 'o' : 'x';
       
       if(currentTurn == playerType && playerType !="spectator")
-        {updateStatus("Make your("+currentTurn+") move"); }
+        {updateStatus("Make your move ["+currentTurn+"]"); }
       else if(playerType !="spectator")
       {
-       updateStatus("Wait for opponents("+currentTurn+") move");
+       updateStatus("Wait for opponent to make a move ["+currentTurn+"]");
      }
      else{
-      updateStatus("you are spectator - Next Move : "+currentTurn);
+      updateStatus("You are a spectator - Next Move : "+currentTurn);
     }
 
     
@@ -258,7 +258,7 @@
    if(playerType=='' && playerTemp['type']=='x'){
     waitScreen.style.display = "none";
     gameScreen.style.display = "block"; 
-    updateStatus("your make the first move");
+    updateStatus("You have to make the first move");
     currentTurn ="x";
     playerType = playerTemp['type'];
     updateGameDetails(userName,room,playerType);
@@ -266,7 +266,7 @@
   }else if(playerType=='' && playerTemp['type']=='o'){
     currentTurn ="x";
     playerType = playerTemp['type'];
-    updateStatus("wait for other player");
+    updateStatus("Wait for opponent's move");
     updateGameDetails(userName,room,playerType);
 
 
