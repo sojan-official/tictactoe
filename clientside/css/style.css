@@ -217,3 +217,9 @@ body{
       display: inline-block;
       font-size: 90px;
     }    
+
+
+#gitlink{
+  margin-top: 20px;
+  text-align:center;
+}
