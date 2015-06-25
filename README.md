@@ -1,3 +1,5 @@
-The OpenShift `nodejs` cartridge documentation can be found at:
+A simple tic tac toe, multiplayer game made using node.js and socket.io
+made for the freshdesk bootcamp , will refractor the code later
 
-http://openshift.github.io/documentation/oo_cartridge_guide.html#nodejs
+
+che
