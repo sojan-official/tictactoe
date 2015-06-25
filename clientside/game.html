@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>TIC TAC TOE</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+  </head>
+  <body onload="">
+
+  <h2 id="gametitle"> TIC TAC TOE </h2>
+    <div class="container">
+
+    
+    
+
+    <div id="promptscreen" >
+    <input name="username" placeholder="User Name" type="text">
+    <input name="roomname"  placeholder="Room Name" type="text">
+    <input value="create" type="submit" onclick="create()">
+    <input value="join"  type="submit" onclick="join()">
+
+
+
+
+    </div>
+
+
+
+ 
+    <div id="waitscreen" style="display:none;">
+    we are waiting for players ...
+
+    <img class="loading" src="../images/loader.gif">
+    </div>
+
+
+    <div id="gamescreen" style="display:none;">
+    <h3 id="gamedetails"></h3>
+
+    <h3 id="message"></h3>
+    <div id="board">
+
+        <div id="col1" class="col">
+        </div>
+        <div id="col2" class="col">
+        </div>
+
+        <div id="col3" class="col">
+        </div>
+
+
+      
+        <div id="col4" class="col">
+        </div>
+        <div id="col5" class="col">
+        </div>
+        <div id="col6" class="col">
+        </div>
+
+  
+
+        <div id="col7" class="col">
+        </div>
+        <div id="col8" class="col">
+        </div>
+        <div id="col9" class="col">
+        </div>
+
+    
+
+
+    </div>
+    </div>
+  </div>
+
+
+
+
+<script src="/socket.io/socket.io.js"></script>
+<script type="text/javascript" src="../js/script.js"></script>
+
+
+
+
+  </body>
+</html>
